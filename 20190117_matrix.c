@@ -12,6 +12,7 @@ int main(void)
 							{0, 0, 1} };
 	int C[ROWS][COLS];
 	int r, c;
+	
 
 	for (r = 0; r < ROWS; r++)
 		for(c = 0; c < COLS; c++)
