@@ -8,21 +8,26 @@ int find_nth_term(int n, int a, int b, int c) {
   //Write your code here.
 
   int sum = 0;
+
+  count = 3;
   
   if (n = 1)
-  { return a + b; }
+      { return a; }
   else if (n = 2)
-  { return a + b; }
+      { return b; }
   else if (n = 3)
-  { return a + b + c; }
+      { return c; }
   else if (n = 0)
-  { return 0; }
-  else
-  {
-      sum = find_nth_term(n-1);
-  } 
-
+      { return 0; }
+  else if (n >= 4)
+      {
+        for (int j = 1; j <= count; j++)
+        {
+          sum += find_nth_term(n-j);
+        }
+      } 
 }
+
 
 int main() {
     int n, a, b, c;
